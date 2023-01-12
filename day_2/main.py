@@ -1,5 +1,5 @@
 if __name__ == "__main__":
-
+    # Part 1 ----------------------------------------     
     import pandas as pd
     df = pd.read_csv("input.txt", sep=" ", header=None)
 
@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     print(score)
 
-
+    # Part 2 ---------------------------------------- 
     import pandas as pd
     df = pd.read_csv("input.txt", sep=" ", header=None)
 

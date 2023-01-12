@@ -1,5 +1,5 @@
 if __name__ == "__main__":
-    
+    # Part 1 ---------------------------------------- 
     import pandas as pd
 
     with open('input.txt') as file:
@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     print(max(calories_sum_list))
 
+    # Part 2 ---------------------------------------- 
     import numpy as np
     sum_top_3 = np.sum(sorted(calories_sum_list)[-3:])
     print(sum_top_3)
-    
