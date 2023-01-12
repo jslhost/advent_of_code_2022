@@ -23,3 +23,4 @@ if __name__ == "__main__":
     import numpy as np
     sum_top_3 = np.sum(sorted(calories_sum_list)[-3:])
     print(sum_top_3)
+    
