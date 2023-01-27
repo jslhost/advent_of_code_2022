@@ -39,3 +39,28 @@ if __name__ == '__main__':
     print(visible_tree_count + nb_bordures)
 
     # Part 2 ---------------------------------------------------------------
+    list_score_total = []
+    for col in range(0, 99):
+        for row in range(0, 99):
+
+            list_of_directions = [
+                df.iloc[0:row, col][::-1], 
+                df.iloc[row+1:None, col], 
+                df.iloc[row, 0:col][::-1], 
+                df.iloc[row, col+1:None]
+                ]
+            target_tree = df.iloc[row, col]
+            list_score = []
+
+            for direction in list_of_directions:
+                visible_tree_angle = 0
+                for tree in direction:
+                    visible_tree_angle += 1
+                    if tree >= target_tree:
+                        break
+                list_score.append(visible_tree_angle)
+            
+            prod = np.prod(list_score)
+            list_score_total.append(prod)
+
+    print(np.max(list_score_total))
